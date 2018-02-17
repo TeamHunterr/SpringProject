@@ -19,7 +19,7 @@ public class SpyAgent {
 		System.out.println("after getAddress "+jp.getSignature());
 	}*/
 	
-	@Around("execution(* com.Beans.PersonBean.setListAddress(*))")
+	@Around("execution(* com.Beans.PersonBean.getListAddress())")
 	public Object printSetData(ProceedingJoinPoint jp) throws Throwable{
 		ArrayList<String> dataList=(ArrayList<String>) jp.proceed();
 		System.out.println("data og ="+dataList);
