@@ -9,7 +9,7 @@
 
 	<aop:aspectj-autoproxy />
 
-	<beans:bean id="personBean1" class="com.StandAlone.BeanClass"
+	<beans:bean id="personBean1" class="com.Beans.PersonBean"
 		scope="prototype">
 		<beans:property name="strName">
 			<beans:value>Person1</beans:value>
@@ -27,7 +27,7 @@
 	</beans:bean>
 
 
-	<beans:bean id="personBean2" class="com.StandAlone.BeanClass"
+	<beans:bean id="personBean2" class="com.Beans.PersonBean"
 		scope="">
 		<beans:property name="strName">
 			<beans:value>Person2</beans:value>
@@ -44,5 +44,5 @@
 		</beans:property>
 	</beans:bean>
 
-	<beans:bean id="spyAgentObj" class="com.StandAlone.AOP.SpyAgent"></beans:bean>
+	<beans:bean id="spyAgentObj" class="com.AOP.SpyAgent"></beans:bean>
 </beans:beans>
