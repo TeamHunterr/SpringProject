@@ -1,0 +1,48 @@
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<aop:aspectj-autoproxy />
+
+	<beans:bean id="personBean1" class="com.StandAlone.BeanClass"
+		scope="prototype">
+		<beans:property name="strName">
+			<beans:value>Person1</beans:value>
+		</beans:property>
+		<beans:property name="intAge">
+			<beans:value>26</beans:value>
+		</beans:property>
+		<beans:property name="listAddress">
+			<beans:list>
+				<beans:value>Kochi</beans:value>
+				<beans:value>Kerala</beans:value>
+				<beans:value>India</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+
+	<beans:bean id="personBean2" class="com.StandAlone.BeanClass"
+		scope="">
+		<beans:property name="strName">
+			<beans:value>Person2</beans:value>
+		</beans:property>
+		<beans:property name="intAge">
+			<beans:value>20</beans:value>
+		</beans:property>
+		<beans:property name="listAddress">
+			<beans:list>
+				<beans:value>Mumbai</beans:value>
+				<beans:value>Maharashtra</beans:value>
+				<beans:value>India</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="spyAgentObj" class="com.StandAlone.AOP.SpyAgent"></beans:bean>
+</beans:beans>
